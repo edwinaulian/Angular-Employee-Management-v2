@@ -49,6 +49,7 @@ export class TableEmployeesComponent implements OnInit {
     this.employeesService.deleteDataEmployee(id).subscribe({
       next: (res) => {
         alert("data berhasil di hapus");
+        this.globalServiceParamNavigateService.navigateToEmployeesPage();
         this.getDataEmployees();
       }, error: () => {
         alert("error hapus data employee");
