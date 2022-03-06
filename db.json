@@ -1,0 +1,267 @@
+{
+  "employees": [
+    {
+      "username": "Edwin aulia nugraha",
+      "firstName": "Edwin",
+      "lastName": "Aulia Nugraha",
+      "email": "edwinauliano@gmail.com",
+      "birthDate": "2022-03-17",
+      "basicSalary": "15000000",
+      "status": "Single",
+      "group": "Front End Angular Developer",
+      "description": "Hello , this is first data post from me yaya",
+      "id": 1
+    },
+    {
+      "username": "danano",
+      "firstName": "danano",
+      "lastName": "sar",
+      "email": "danaosar@gmail.com",
+      "birthDate": "2022-03-25",
+      "basicSalary": "8000000",
+      "status": "Maried",
+      "group": "IT Departement",
+      "description": "hahaha",
+      "id": 107
+    },
+    {
+      "username": "testa",
+      "firstName": "testa",
+      "lastName": "nama",
+      "email": "testanama@yahoo.com",
+      "birthDate": "2022-03-25",
+      "basicSalary": "8000000",
+      "status": "Maried",
+      "group": "Account Departement",
+      "description": "testa to",
+      "id": 108
+    },
+    {
+      "username": "Sawadikrap",
+      "firstName": "sawadikrap",
+      "lastName": "khap",
+      "email": "sawah@gmail.com",
+      "birthDate": "2022-01-12T17:00:00.000Z",
+      "basicSalary": 3900000,
+      "status": "Maried",
+      "group": "Human Resource",
+      "description": "i'am a freshgraduated",
+      "id": 109
+    },
+    {
+      "username": "Moersade",
+      "firstName": "moersade",
+      "lastName": "hadiwiyo",
+      "email": "hadiwiyo@gmail.com",
+      "birthDate": "2022-01-04T17:00:00.000Z",
+      "basicSalary": 20000000,
+      "status": "Maried",
+      "group": "IT Departement",
+      "description": "yesy",
+      "id": 110
+    },
+    {
+      "username": "Tn. Pampam",
+      "firstName": "pampam",
+      "lastName": "halo",
+      "email": "pampam@gmail.com",
+      "birthDate": "1994-01-13T17:00:00.000Z",
+      "basicSalary": 9800000,
+      "status": "Maried",
+      "group": "IT Departement",
+      "description": "hello guys",
+      "id": 111
+    },
+    {
+      "username": "Davie",
+      "firstName": "Davie",
+      "lastName": "Auliani",
+      "email": "davi.aulani@gmail.com",
+      "birthDate": "2022-02-01T17:00:00.000Z",
+      "basicSalary": 12000000,
+      "status": "Single",
+      "group": "IT Departement",
+      "description": "hello",
+      "id": 112
+    },
+    {
+      "username": "Leonardo decalpiko",
+      "firstName": "Leonardo",
+      "lastName": "decalpiko",
+      "email": "decalpiko.leo@gmail.com",
+      "birthDate": "2004-06-13T17:00:00.000Z",
+      "basicSalary": 9000000,
+      "status": "Single",
+      "group": "Marketing Credit",
+      "description": "hello decalpiko",
+      "id": 113
+    },
+    {
+      "username": "Auliano",
+      "firstName": "Auliano",
+      "lastName": "Nugraha",
+      "email": "auliano@gmail.com",
+      "birthDate": "2022-03-19",
+      "basicSalary": 23000000,
+      "status": "Single",
+      "group": "IT Departement",
+      "description": "yes",
+      "id": 114
+    },
+    {
+      "username": "Dinar",
+      "firstName": "Dinar",
+      "lastName": "Aulia",
+      "email": "dinaraulia@gmail.com",
+      "birthDate": "2022-02-14T17:00:00.000Z",
+      "basicSalary": 8000000,
+      "status": "Single",
+      "group": "Hiring Admin",
+      "description": "Hello Edwin, ILY",
+      "id": 115
+    },
+    {
+      "username": "lukas",
+      "firstName": "lukas",
+      "lastName": "graham",
+      "email": "lukasraham@gmail.com",
+      "birthDate": "2022-02-14T17:00:00.000Z",
+      "basicSalary": "12000000",
+      "status": "Single",
+      "group": "Music",
+      "description": "love someone",
+      "id": 4
+    },
+    {
+      "username": "test",
+      "firstName": "test",
+      "lastName": "testna",
+      "email": "tesn@gmail.com",
+      "birthDate": "2022-03-11",
+      "basicSalary": "15000000",
+      "status": "Maried",
+      "group": "IT",
+      "description": "Rindu",
+      "id": 116
+    },
+    {
+      "username": "jksdnkj",
+      "firstName": "jnnkajnsdk",
+      "lastName": "jknjkj",
+      "email": "jnsdkjas@gmail.com",
+      "birthDate": "2022-03-12",
+      "basicSalary": "15000000",
+      "status": "Maried",
+      "group": "Front End Angular Developer",
+      "description": "YE",
+      "id": 117
+    },
+    {
+      "username": "lagi",
+      "firstName": "lagi",
+      "lastName": "halo",
+      "email": "lagi@gmail.com",
+      "birthDate": "2022-03-11",
+      "basicSalary": "14000000",
+      "status": "Maried",
+      "group": "IT",
+      "description": "Test",
+      "id": 118
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "username": "edwin",
+      "password": "edwin",
+      "id": 2
+    },
+    {
+      "username": "ariel",
+      "password": "ariel",
+      "id": 3
+    },
+    {
+      "username": "lampard",
+      "password": "lampard",
+      "id": 4
+    },
+    {
+      "username": "Ream",
+      "password": "ream",
+      "id": 5
+    },
+    {
+      "username": "maka",
+      "password": "maka",
+      "id": 6
+    },
+    {
+      "username": "loem",
+      "password": "loem",
+      "id": 7
+    },
+    {
+      "username": "rumah",
+      "password": "rumah",
+      "id": 8
+    },
+    {
+      "username": "lupaku",
+      "password": "lupaku",
+      "id": 9
+    },
+    {
+      "username": "return",
+      "password": "return",
+      "id": 10
+    },
+    {
+      "username": "ondel",
+      "password": "ondel",
+      "id": 11
+    },
+    {
+      "username": "nyinyir",
+      "password": "nyonyor",
+      "id": 12
+    },
+    {
+      "username": "lura",
+      "password": "lura",
+      "id": 13
+    },
+    {
+      "username": "hijau",
+      "password": "hijau",
+      "id": 14
+    },
+    {
+      "username": "jika",
+      "password": "jika",
+      "id": 15
+    },
+    {
+      "username": "harus",
+      "password": "harus",
+      "id": 16
+    },
+    {
+      "username": "graha",
+      "password": "graha",
+      "id": 17
+    },
+    {
+      "username": "isojetlag",
+      "password": "isojetlag",
+      "id": 18
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

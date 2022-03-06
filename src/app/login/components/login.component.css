@@ -1,0 +1,12 @@
+.container {
+    width: 50%;
+    margin: 1rem auto ;
+    margin-top: 10rem;
+    background-color: #f8f9fa;
+    border-radius: 5%;
+}
+
+.form-control, .form-label, .btn {
+    width: 100%;
+    margin-left: 10%;
+}

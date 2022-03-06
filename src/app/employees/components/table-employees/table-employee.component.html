@@ -1,0 +1,49 @@
+<div class="m-5">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">No</th>
+        <th scope="col">User Name</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Birth Date</th>
+        <th scope="col">Basic Salary</th>
+        <th scope="col">Status</th>
+        <th scope="col">Group</th>
+        <th scope="col">Description</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let rowData of dataEmployees | slice: (page-1) * pageSize : page * pageSize let i = index"
+        (click)="goToDetailEmployee(rowData)">
+        <td scope="row" class="row-value">{{ i + 1 }}</td>
+        <td class="row-value">{{ rowData.username }}</td>
+        <td class="row-value">{{ rowData.firstName }}</td>
+        <td class="row-value">{{ rowData.lastName }} </td>
+        <td class="row-value">{{ rowData.email }}</td>
+        <td class="row-value">{{ rowData.birthDate | date }}</td>
+        <td class="row-value">{{ rowData.basicSalary | currency:"IDR":"Rp" }}</td>
+        <td class="row-value">{{ rowData.status }}</td>
+        <td class="row-value">{{ rowData.group }}</td>
+        <td class="row-value">{{ rowData.description }}</td>
+        <td class="row-value">
+          <i class="fa fa-trash fa-2x" (click)="deleted(rowData.id)"></i>
+          <i class="fa fa-pencil-square-o fa-2x" (click)="edit(rowData)"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="d-flex justify-content-between p-2">
+  <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [pageSize]="pageSize"
+    [collectionSize]="dataEmployees.length"></ngb-pagination>
+
+  <select class="form-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="refreshCountries()">
+    <option [ngValue]="2">2 items per page</option>
+    <option [ngValue]="4">4 items per page</option>
+    <option [ngValue]="6">6 items per page</option>
+  </select>
+</div>
