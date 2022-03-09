@@ -16,7 +16,7 @@ export class AddEmployeesComponent implements OnInit {
   employeesForm: FormGroup;
   selectedValueBirthDate: any;
   passingDataEdit: any;
-  nameButtonDinamic: string = 'Save';
+  nameButtonDinamic: string = appGlobalConstant.LABEL_SAVE;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -46,26 +46,28 @@ export class AddEmployeesComponent implements OnInit {
   }
 
   isEdit() {
-    const dataEdit = localStorage.getItem("dataEdit");
+    const dataEdit = localStorage.getItem(appGlobalConstant.DATA_EDIT);
     this.passingDataEdit = JSON.parse(dataEdit);
     if (this.passingDataEdit != appGlobalConstant.EMPLTY_VALUE && this.passingDataEdit != appGlobalConstant.UNDEFINED_VALUE) {
       this.selectedValueBirthDate = this.passingDataEdit.birthDate;
       this.employeesForm.patchValue(this.passingDataEdit);
-      this.nameButtonDinamic = "Edit";
+      this.nameButtonDinamic = appGlobalConstant.LABEL_EDIT;
     }
   }
 
   postDataEmployee() {
     const rawData = this.employeesForm.getRawValue();
     this.formatToServer(rawData);
+    if (!this.employeesForm.valid) {
+      return alert("semua filed harus di isi!");
+    }
     this.employeeServiceParam.dataEdit == appGlobalConstant.EMPLTY_VALUE ? this.save(rawData) : this.edit(rawData);
   }
 
   cancel() {
-    this.globalServiceParamNavigateService.navigateToEmployeesPage();
+    this.succesResSavenEditData();
     this.employeeServiceParam.clearEditDataStorage();
-    this.employeeServiceParam.dataEdit = appGlobalConstant.EMPLTY_VALUE;
-    this.employeesForm.reset();
+    this.employeeServiceParam.clearDataEdirValue();
   }
 
   formatToServer(rawData) {
@@ -76,8 +78,7 @@ export class AddEmployeesComponent implements OnInit {
   save(rawData) {
     this.employeesService.postNewDataEmployee(rawData).subscribe({
       next: () => {
-        this.employeesForm.reset();
-        this.globalServiceParamNavigateService.navigateToEmployeesPage();
+        this.succesResSavenEditData();
         alert("data berhasil di tambah")
       }, error: () => {
         alert("error save data employee");
@@ -89,13 +90,17 @@ export class AddEmployeesComponent implements OnInit {
     const id = this.passingDataEdit.id;
     this.employeesService.editDataEmployee(rawData, id).subscribe({
       next: () => {
-        this.employeesForm.reset();
-        this.globalServiceParamNavigateService.navigateToEmployeesPage();
+        this.succesResSavenEditData();
         alert("data berhasil di ubah");
       }, error: () => {
         alert("error edit data employee");
       }
     })
+  }
+
+  succesResSavenEditData() {
+    this.employeesForm.reset();
+    this.globalServiceParamNavigateService.navigateToEmployeesPage();
   }
 
 }

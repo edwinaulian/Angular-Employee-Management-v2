@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GlobalServiceParamNavigateService } from 'src/app/common/service/global-param-navigate-service';
 import { EmployeeServiceParam } from '../../service/employees-service-param';
 import { EmployeesService } from './../../../common/service/employees-service';
+import { appGlobalConstant } from './../../../common/constant/actionTypes';
 
 @Component({
   selector: 'app-table-employee',
@@ -19,14 +20,14 @@ export class TableEmployeesComponent implements OnInit {
     private globalServiceParamNavigateService: GlobalServiceParamNavigateService,
     private employeeServiceParam: EmployeeServiceParam,
   ) {
-    this.refreshCountries();
+    this.refreshOptionData();
   }
 
   ngOnInit() {
     this.getDataEmployees();
   }
 
-  refreshCountries() {
+  refreshOptionData() {
     this.dataEmployees.map((val, i) => ({ id: i + 1, ...val })).slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
   }
 
@@ -36,13 +37,9 @@ export class TableEmployeesComponent implements OnInit {
         this.dataEmployees = res;
         JSON.stringify(this.dataEmployees);
       }, error: (err) => {
-        this.errorInfoFetchingData();
+        this.employeeServiceParam.errorInfoFetchingData();
       }
     })
-  }
-
-  errorInfoFetchingData() {
-    alert("error get data employeess");
   }
 
   deleted(id) {
@@ -52,19 +49,19 @@ export class TableEmployeesComponent implements OnInit {
         this.globalServiceParamNavigateService.navigateToEmployeesPage();
         this.getDataEmployees();
       }, error: () => {
-        alert("error hapus data employee");
+        this.employeeServiceParam.errorInfoFetchingData();
       }
     })
   }
 
   edit(data) {
-    localStorage.setItem("dataEdit", JSON.stringify(data));
+    localStorage.setItem(appGlobalConstant.DATA_EDIT, JSON.stringify(data));
     this.employeeServiceParam.dataEdit = data;
     this.globalServiceParamNavigateService.navigateToAddEmployee();
   }
 
   goToDetailEmployee(rawData) {
-    localStorage.setItem("detailEmployee", JSON.stringify(rawData));
+    localStorage.setItem(appGlobalConstant.DETAIL_EMPLOYEE, JSON.stringify(rawData));
     this.globalServiceParamNavigateService.navigateToDetailEmployee();
   }
 }

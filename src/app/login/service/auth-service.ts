@@ -7,7 +7,7 @@ import { GlobalServiceParamNavigateService } from './../../common/service/global
 
 @Injectable()
 export class AuthService {
-    retUrl: string = "employees";
+    retUrl: string = appGlobalConstant.EMPLOYEES;
     isLogin: boolean;
     username: string;
     password: string;
@@ -22,7 +22,7 @@ export class AuthService {
     }
 
     loggedIn() {
-        return !!localStorage.getItem("login");
+        return !!localStorage.getItem(appGlobalConstant.LOGIN);
     }
 
     login(loginDataValue: Object): void {
@@ -38,11 +38,11 @@ export class AuthService {
     loginSucces(data) {
         this.router.navigate([this.retUrl]);
         alert(`Selamat datang ${data.username}`);
-        localStorage.setItem("login", JSON.stringify(data));
+        localStorage.setItem(appGlobalConstant.LOGIN, JSON.stringify(data));
         this.isLogin = true;
         this.username = data.username;
         this.password = data.password;
-        setTimeout(function() {
+        setTimeout(function () {
             location.reload();
         }, 10);
         return of(this.loginStatus);

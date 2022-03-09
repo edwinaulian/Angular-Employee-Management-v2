@@ -5,7 +5,7 @@
       "firstName": "Edwin",
       "lastName": "Aulia Nugraha",
       "email": "edwinauliano@gmail.com",
-      "birthDate": "2022-03-17",
+      "birthDate": "2022-03-27",
       "basicSalary": "15000000",
       "status": "Single",
       "group": "Front End Angular Developer",
@@ -22,7 +22,7 @@
       "status": "Maried",
       "group": "IT Departement",
       "description": "hahaha",
-      "id": 107
+      "id": 2
     },
     {
       "username": "testa",
@@ -34,7 +34,7 @@
       "status": "Maried",
       "group": "Account Departement",
       "description": "testa to",
-      "id": 108
+      "id": 3
     },
     {
       "username": "Sawadikrap",
@@ -46,7 +46,7 @@
       "status": "Maried",
       "group": "Human Resource",
       "description": "i'am a freshgraduated",
-      "id": 109
+      "id": 4
     },
     {
       "username": "Moersade",
@@ -58,7 +58,7 @@
       "status": "Maried",
       "group": "IT Departement",
       "description": "yesy",
-      "id": 110
+      "id": 5
     },
     {
       "username": "Tn. Pampam",
@@ -70,7 +70,7 @@
       "status": "Maried",
       "group": "IT Departement",
       "description": "hello guys",
-      "id": 111
+      "id": 6
     },
     {
       "username": "Davie",
@@ -82,7 +82,7 @@
       "status": "Single",
       "group": "IT Departement",
       "description": "hello",
-      "id": 112
+      "id": 7
     },
     {
       "username": "Leonardo decalpiko",
@@ -94,7 +94,7 @@
       "status": "Single",
       "group": "Marketing Credit",
       "description": "hello decalpiko",
-      "id": 113
+      "id": 8
     },
     {
       "username": "Auliano",
@@ -106,7 +106,7 @@
       "status": "Single",
       "group": "IT Departement",
       "description": "yes",
-      "id": 114
+      "id": 9
     },
     {
       "username": "Dinar",
@@ -118,7 +118,7 @@
       "status": "Single",
       "group": "Hiring Admin",
       "description": "Hello Edwin, ILY",
-      "id": 115
+      "id": 10
     },
     {
       "username": "lukas",
@@ -130,7 +130,7 @@
       "status": "Single",
       "group": "Music",
       "description": "love someone",
-      "id": 4
+      "id": 11
     },
     {
       "username": "test",
@@ -142,7 +142,7 @@
       "status": "Maried",
       "group": "IT",
       "description": "Rindu",
-      "id": 116
+      "id": 12
     },
     {
       "username": "jksdnkj",
@@ -154,7 +154,7 @@
       "status": "Maried",
       "group": "Front End Angular Developer",
       "description": "YE",
-      "id": 117
+      "id": 13
     },
     {
       "username": "lagi",
@@ -166,7 +166,7 @@
       "status": "Maried",
       "group": "IT",
       "description": "Test",
-      "id": 118
+      "id": 14
     }
   ],
   "users": [
@@ -259,6 +259,16 @@
       "username": "isojetlag",
       "password": "isojetlag",
       "id": 18
+    },
+    {
+      "username": "edward",
+      "password": "adward",
+      "id": 19
+    },
+    {
+      "username": "test",
+      "password": "test",
+      "id": 20
     }
   ],
   "profile": {

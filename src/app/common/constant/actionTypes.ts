@@ -8,6 +8,9 @@ export const appGlobalConstant = {
     LOGIN: "login",
     DATA_EMPLOYEE: "dataEmployee",
     ADD_DATA_EMPLOYEE: "add_employee",
+    DATA_EDIT: "dataEdit",
+    LABEL_EDIT: "Edit",
+    LABEL_SAVE: "Save",
 }
 
 export const appNavigateTo = {

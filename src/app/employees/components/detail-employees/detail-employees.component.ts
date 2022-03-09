@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalServiceParamNavigateService } from 'src/app/common/service/global-param-navigate-service';
+import { appGlobalConstant } from './../../../common/constant/actionTypes';
 
 @Component({
   selector: 'app-detail-employees',
@@ -15,7 +16,7 @@ export class DetailEmployeesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    const detailEmployee = localStorage.getItem("detailEmployee");
+    const detailEmployee = localStorage.getItem(appGlobalConstant.DETAIL_EMPLOYEE);
     this.dataEmployee = JSON.parse(detailEmployee);
   }
 

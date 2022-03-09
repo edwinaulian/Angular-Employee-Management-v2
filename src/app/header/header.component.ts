@@ -4,7 +4,6 @@ import { GlobalServiceParamNavigateService } from '../common/service/global-para
 import { AuthService } from './../login/service/auth-service';
 import { appGlobalConstant } from './../common/constant/actionTypes';
 import { EmployeeServiceParam } from './../employees/service/employees-service-param';
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
