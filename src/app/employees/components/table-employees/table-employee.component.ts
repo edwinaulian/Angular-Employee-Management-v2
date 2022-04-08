@@ -34,8 +34,7 @@ export class TableEmployeesComponent implements OnInit {
   getDataEmployees() {
     this.employeesService.getDataEmployee().subscribe({
       next: (res) => {
-        this.dataEmployees = res;
-        JSON.stringify(this.dataEmployees);
+        JSON.stringify(this.dataEmployees = res);
       }, error: (err) => {
         this.employeeServiceParam.errorInfoFetchingData();
       }
@@ -62,6 +61,6 @@ export class TableEmployeesComponent implements OnInit {
 
   goToDetailEmployee(rawData) {
     localStorage.setItem(appGlobalConstant.DETAIL_EMPLOYEE, JSON.stringify(rawData));
-    this.globalServiceParamNavigateService.navigateToDetailEmployee();
+    this.globalServiceParamNavigateService.navigateToDetailEmployee(rawData);
   }
 }

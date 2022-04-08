@@ -13,8 +13,8 @@ export class GlobalServiceParamNavigateService {
         this.router.navigate([appNavigateTo.ADD_EMPLOYEE_PAGE]);
     }
 
-    navigateToDetailEmployee() {
-        this.router.navigate([appNavigateTo.DETAIL_EMPLOYEE_PAGE]);
+    navigateToDetailEmployee(rawData) {
+        this.router.navigate([appNavigateTo.DETAIL_EMPLOYEE_PAGE], { queryParams: { id: rawData.id } });
     }
 
     navigateToLoginPage() {
